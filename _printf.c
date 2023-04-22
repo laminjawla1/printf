@@ -56,6 +56,7 @@ int _printf(const char *format, ...)
 				return (total_chars);
 			_putchar(format[i]);
 			total_chars++;
+			continue;
 		}
 		_putchar(format[i]);
 		total_chars++;
