@@ -11,9 +11,9 @@ int (*reference(char c))(va_list args)
 	func_table table[] = {
 		{'c', print_char},
 		{'s', print_str},
+		{'i', print_int},
+		{'d', print_int},
 		/**
-		*{'i', print_int},
-		*{'d', print_int},
 		*{'x', print_hex},
 		*{'o', print_oct},
 		*/
