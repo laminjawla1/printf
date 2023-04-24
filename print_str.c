@@ -11,7 +11,7 @@ int print_str(va_list args)
 	int i = 0, cnt = 0, check;
 
 	if (str == NULL)
-		str = "(nil)";
+		str = "(null)";
 	while (str[i])
 	{
 		check = write(1, &str[i], 1);
