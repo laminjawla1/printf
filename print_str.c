@@ -8,16 +8,15 @@
 int print_str(va_list args)
 {
 	char *str = va_arg(args, char *);
-	int i = 0, cnt = 0, check;
+	int i, cnt = 0, check;
 
 	if (str == NULL)
 		str = "(null)";
-	while (str[i])
+	for (i = 0; str[i]; i++)
 	{
-		check = write(1, &str[i], 1);
+		check = _putchar(str[i]);
 		if (check > 0)
 			cnt++;
-		i++;
 	}
 	return (cnt);
 }
