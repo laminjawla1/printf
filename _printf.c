@@ -13,6 +13,7 @@ int (*reference(char c))(va_list args)
 		{'s', print_str},
 		{'i', print_int},
 		{'d', print_int},
+		{'b', print_bin},
 		/**
 		*{'x', print_hex},
 		*{'o', print_oct},
