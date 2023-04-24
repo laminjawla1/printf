@@ -17,7 +17,6 @@ int (*reference(char c))(va_list args)
 		*{'x', print_hex},
 		*{'o', print_oct},
 		*/
-		{'%', print_percent},
 		{'\0', '\0'}
 	};
 	int i = 0;
@@ -57,12 +56,23 @@ int _printf(const char *format, ...)
 			}
 			if (!format[i + 1])
 				return (-1);
+			if (format[i + 1] == '%')
+			{
+				_putchar('%');
+				total_chars++;
+				i++;
+			}
+			else
+			{
+				_putchar(format[i]);
+				total_chars++;
+			}
+		}
+		else
+		{
 			_putchar(format[i]);
 			total_chars++;
-			continue;
 		}
-		_putchar(format[i]);
-		total_chars++;
 	}
 	return (total_chars);
 }
