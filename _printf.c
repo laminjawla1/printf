@@ -56,7 +56,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			if (!format[i + 1])
-				return (total_chars);
+				return (-1);
 			_putchar(format[i]);
 			total_chars++;
 			continue;
