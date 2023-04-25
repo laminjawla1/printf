@@ -19,12 +19,13 @@ int print_bin(va_list args)
 		tmp /= 2;
 		len++;
 	}
-	for (i = 1; i <= len - 1; i++)
+	for (i = 0; i < len - 1; i++)
 		highest_power *= 2;
 	for (i = 0; i < len; i++)
 	{
-		digit = number / highest_power;
-		cnt += _putchar(digit + '0');
+		digit = number / highest_power; 
+		_putchar(digit + '0');
+		cnt++; 
 		number -= digit * highest_power;
 		highest_power /= 2;
 	}
