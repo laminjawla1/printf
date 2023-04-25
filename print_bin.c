@@ -11,7 +11,7 @@ int print_bin(va_list args)
 
 	number = va_arg(args, size_t);
 
-	if (!number)
+	if (number == 0)
 		return (_putchar('0'));
 	tmp = number;
 	while (tmp)
@@ -19,7 +19,7 @@ int print_bin(va_list args)
 		tmp /= 2;
 		len++;
 	}
-	for (i = 0; i < len - 1; i++)
+	for (i = 1; i <= len - 1; i++)
 		highest_power *= 2;
 	for (i = 0; i < len; i++)
 	{
