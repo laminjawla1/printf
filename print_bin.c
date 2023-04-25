@@ -11,8 +11,6 @@ int print_bin(va_list args)
 
 	number = va_arg(args, size_t);
 
-	if (number == NULL)
-		return (-1);
 	if (number == 0)
 		return (_putchar('0'));
 	tmp = number;
