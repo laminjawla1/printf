@@ -23,8 +23,8 @@ int print_bin(va_list args)
 		highest_power *= 2;
 	for (i = 0; i < len; i++)
 	{
-		digit = number / highest_power; 
-		cnt +=_putchar(digit + '0'); 
+		digit = number / highest_power;
+		cnt += _putchar(digit + '0');
 		number -= digit * highest_power;
 		highest_power /= 2;
 	}
