@@ -11,6 +11,8 @@ int print_bin(va_list args)
 
 	number = va_arg(args, size_t);
 
+	if (number == '\0')
+		return (-1);
 	if (number == 0)
 		return (_putchar('0'));
 	tmp = number;
@@ -24,8 +26,7 @@ int print_bin(va_list args)
 	for (i = 0; i < len; i++)
 	{
 		digit = number / highest_power; 
-		_putchar(digit + '0');
-		cnt++; 
+		cnt +=_putchar(digit + '0'); 
 		number -= digit * highest_power;
 		highest_power /= 2;
 	}
