@@ -59,21 +59,14 @@ int _printf(const char *format, ...)
 				return (-1);
 			if (format[i + 1] == '%')
 			{
-				_putchar('%');
-				total_chars++;
+				total_chars += _putchar('%');
 				i++;
 			}
 			else
-			{
-				_putchar(format[i]);
-				total_chars++;
-			}
+				total_chars += _putchar(format[i]);
 		}
 		else
-		{
-			_putchar(format[i]);
-			total_chars++;
-		}
+			total_chars += _putchar(format[i]);
 	}
 	return (total_chars);
 }
