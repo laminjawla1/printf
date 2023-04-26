@@ -14,10 +14,10 @@ int (*reference(char c))(va_list args)
 		{'i', print_int},
 		{'d', print_int},
 		{'b', print_bin},
-		/**
-		*{'x', print_hex},
-		*{'o', print_oct},
-		*/
+		{'u', print_unsigned_int},
+		{'x', print_hexa_lower},
+		{'X', print_hexa_upper},
+		{'o', print_octal},
 		{'\0', '\0'}
 	};
 	int i = 0;

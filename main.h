@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdbool.h>
 
 int _printf(const char *format, ...);
 int _putchar(int c);
@@ -19,8 +20,10 @@ int print_char(va_list args);
 int print_str(va_list args);
 int print_int(va_list args);
 int print_bin(va_list args);
-/*int print_hex(va_list args);*/
-/*int print_oct(va_list args);*/
+int print_unsigned_int(va_list args);
+int print_octal(va_list args);
+int print_hexa_lower(va_list args);
+int print_hexa_upper(va_list args);
 int print_percent(va_list args);
 
 #endif
