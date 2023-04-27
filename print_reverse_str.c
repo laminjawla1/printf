@@ -12,7 +12,7 @@ int print_reverse_str(va_list args)
 
 	str = va_arg(args, char *);
 	if (str == NULL)
-		str = "(null)";
+		return (-1);
 
 	len = _strlen(str);
 	buffer = malloc(sizeof(char) * (len + 1));
