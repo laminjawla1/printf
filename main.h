@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 int _printf(const char *format, ...);
 int _putchar(int c);
@@ -25,5 +26,8 @@ int print_octal(va_list args);
 int print_hexa_lower(va_list args);
 int print_hexa_upper(va_list args);
 int print_percent(va_list args);
-
+int print_reverse_str(va_list args);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
+char *reverse_str(char *s);
 #endif

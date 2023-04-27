@@ -18,6 +18,7 @@ int (*reference(char c))(va_list args)
 		{'x', print_hexa_lower},
 		{'X', print_hexa_upper},
 		{'o', print_octal},
+		{'r', print_reverse_str},
 		{'\0', '\0'}
 	};
 	int i = 0;
