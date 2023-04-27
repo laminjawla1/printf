@@ -19,6 +19,7 @@ int (*reference(char c))(va_list args)
 		{'X', print_hexa_upper},
 		{'o', print_octal},
 		{'r', print_reverse_str},
+		{'R', print_rot13},
 		{'\0', '\0'}
 	};
 	int i = 0;

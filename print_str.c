@@ -3,7 +3,7 @@
 *print_str - writes a character to stdout
 *@args: argument
 *
-*Return: 1 if success else -1
+*Return: Nuber of chars printed
 */
 int print_str(va_list args)
 {

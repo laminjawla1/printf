@@ -30,4 +30,5 @@ int print_reverse_str(va_list args);
 char *_strcpy(char *dest, char *src);
 int _strlen(char *s);
 char *reverse_str(char *s);
+int print_rot13(va_list args);
 #endif
